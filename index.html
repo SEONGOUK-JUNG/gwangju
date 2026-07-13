@@ -14,6 +14,8 @@
     --wash:#f6f8fb;
     --gov:#0b3d91;      /* 정부 네이비 */
     --gov-soft:#e8eef8;
+    --teal:#e07b1a;     /* 2단계 구분색 (오렌지) */
+    --teal-soft:#fdefe0;
     --accent:#c8102e;   /* 강조 레드 */
     --accent-soft:#fdecef;
     --ok:#0f7b4f;
@@ -108,6 +110,18 @@
     padding:4px 9px;border-radius:6px;white-space:nowrap;
   }
   .lead{color:var(--ink-soft);font-size:14px;margin:8px 0 16px;}
+
+  /* ── 2단계 청록 구분색 ── */
+  .sec-gov{border-top:4px solid var(--gov);}
+  .sec-teal{border-top:4px solid var(--teal);}
+  .sec-teal .step-no{background:var(--teal);}
+  .sec-teal .step-head .who{color:var(--teal);background:var(--teal-soft);}
+  .sec-teal .lb-open{background:var(--teal);}
+  .sec-teal .lb-text{color:var(--teal);}
+  .sec-teal .note{
+    background:var(--teal-soft);border-color:#f6d5ac;color:#9a5410;
+  }
+  .sec-teal .note b{color:var(--teal);}
   .fieldtag{
     margin:12px 0 4px;
     background:var(--accent-soft);
@@ -345,7 +359,7 @@
   </header>
 
   <!-- 1단계 -->
-  <section>
+  <section class="sec-gov">
     <div class="step-head">
       <span class="step-no">1</span>
       <h2>후보 추천 — 국민추천제</h2>
@@ -444,7 +458,7 @@
   </section>
 
   <!-- 2단계 -->
-  <section>
+  <section class="sec-teal">
     <div class="step-head">
       <span class="step-no">2</span>
       <h2>시민추천제 투표인단 신청</h2>
