@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전남광주통합특별시 부시장 국민추천제 참여 안내</title>
+<style>
+  :root{
+    --ink:#1a2230;
+    --ink-soft:#4a5568;
+    --line:#e2e6ee;
+    --line-soft:#eef1f6;
+    --paper:#ffffff;
+    --wash:#f6f8fb;
+    --gov:#0b3d91;      /* 정부 네이비 */
+    --gov-soft:#e8eef8;
+    --accent:#c8102e;   /* 강조 레드 */
+    --accent-soft:#fdecef;
+    --ok:#0f7b4f;
+    --radius:14px;
+    --shadow:0 1px 2px rgba(20,30,50,.05), 0 8px 24px rgba(20,30,50,.06);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--wash);
+    line-height:1.65;
+    letter-spacing:-.01em;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:0 16px 72px;}
+
+  /* ── 헤더 ── */
+  header{
+    background:linear-gradient(160deg,#0b3d91 0%,#123f86 55%,#0a2f6e 100%);
+    color:#fff;
+    padding:34px 22px 30px;
+    border-radius:0 0 22px 22px;
+    box-shadow:var(--shadow);
+  }
+  .eyebrow{
+    display:inline-block;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.06em;
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.22);
+    padding:5px 11px;
+    border-radius:999px;
+    margin-bottom:14px;
+  }
+  header h1{
+    margin:0 0 6px;
+    font-size:25px;
+    font-weight:800;
+    line-height:1.35;
+    letter-spacing:-.02em;
+  }
+  header .sub{
+    margin:0;
+    font-size:14px;
+    color:#dbe4f6;
+  }
+  .period{
+    margin-top:18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:12px;
+    padding:11px 14px;
+    font-size:14px;
+  }
+  .period b{font-weight:800;color:#fff;}
+  .period .tag{
+    font-size:11px;font-weight:700;
+    background:var(--accent);color:#fff;
+    padding:3px 8px;border-radius:6px;white-space:nowrap;
+  }
+
+  /* ── 섹션 공통 ── */
+  section{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:22px;
+    margin-top:18px;
+  }
+  .step-head{
+    display:flex;align-items:center;gap:11px;margin-bottom:4px;
+  }
+  .step-no{
+    flex:none;
+    width:30px;height:30px;
+    display:grid;place-items:center;
+    background:var(--gov);color:#fff;
+    border-radius:9px;
+    font-weight:800;font-size:15px;
+  }
+  .step-head h2{margin:0;font-size:18px;font-weight:800;letter-spacing:-.02em;}
+  .step-head .who{
+    margin-left:auto;font-size:11px;font-weight:700;
+    color:var(--gov);background:var(--gov-soft);
+    padding:4px 9px;border-radius:6px;white-space:nowrap;
+  }
+  .lead{color:var(--ink-soft);font-size:14px;margin:8px 0 16px;}
+  .fieldtag{
+    margin:12px 0 4px;
+    background:var(--accent-soft);
+    border:1px solid #f4cdd4;
+    border-radius:9px;
+    padding:9px 13px;
+    font-size:13px;font-weight:700;color:var(--accent);
+    line-height:1.5;
+  }
+
+  /* ── 링크 박스 ── */
+  .linkbox{
+    background:var(--wash);
+    border:1px solid var(--line);
+    border-radius:11px;
+    padding:12px 14px;
+    display:flex;align-items:center;gap:10px;
+    margin-bottom:16px;
+  }
+  .linkbox .lb-text{
+    flex:1;min-width:0;
+    font-size:12.5px;color:var(--gov);
+    font-weight:600;
+    word-break:break-all;line-height:1.45;
+  }
+  .linkbox .lb-open{
+    flex:none;
+    font-size:12px;font-weight:700;
+    color:#fff;background:var(--gov);
+    padding:8px 12px;border-radius:8px;
+    text-decoration:none;white-space:nowrap;
+  }
+
+  /* ── 입력 순서 테이블 ── */
+  .fields{margin:6px 0 4px;}
+  .field{
+    display:flex;gap:12px;align-items:baseline;
+    padding:9px 0;border-bottom:1px dashed var(--line-soft);
+    font-size:14px;
+  }
+  .field:last-child{border-bottom:none;}
+  .field .k{
+    flex:none;width:96px;color:var(--ink-soft);font-weight:600;
+  }
+  .field .v{flex:1;font-weight:600;}
+  .field .v.mut{color:#9aa4b4;font-weight:500;}
+  .req{color:var(--accent);font-weight:800;margin-left:2px;}
+
+  .copychip{
+    display:inline-flex;align-items:center;gap:5px;
+    font-size:11.5px;font-weight:700;
+    color:var(--gov);background:var(--gov-soft);
+    border:1px solid #d6e0f2;
+    padding:4px 9px;border-radius:7px;
+    cursor:pointer;margin-left:6px;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .copychip:active{transform:scale(.96);}
+  .copychip.done{color:#fff;background:var(--ok);border-color:var(--ok);}
+
+  /* ── 학력경력 블록 ── */
+  .block{
+    background:var(--wash);
+    border:1px solid var(--line);
+    border-radius:11px;
+    padding:14px;margin-top:6px;
+  }
+  .block .bh{
+    display:flex;align-items:center;justify-content:space-between;
+    margin-bottom:8px;
+  }
+  .block .bh .bt{font-size:12.5px;font-weight:700;color:var(--ink-soft);}
+  .block pre{
+    margin:0;white-space:pre-wrap;word-break:break-word;
+    font-family:inherit;font-size:13px;color:var(--ink);line-height:1.6;
+  }
+
+  /* ── 안내 note ── */
+  .note{
+    margin-top:14px;
+    background:var(--accent-soft);
+    border:1px solid #f4cdd4;
+    border-radius:10px;
+    padding:12px 14px;
+    font-size:12.5px;color:#8a2733;line-height:1.55;
+  }
+  .note b{color:var(--accent);}
+
+  /* ── 추천사유 30선 ── */
+  .ex-intro{color:var(--ink-soft);font-size:14px;margin:8px 0 4px;}
+  .filterbar{
+    display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 6px;
+  }
+  .fbtn{
+    font-size:12px;font-weight:700;
+    color:var(--ink-soft);background:var(--wash);
+    border:1px solid var(--line);
+    padding:7px 12px;border-radius:999px;cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .fbtn.active{color:#fff;background:var(--gov);border-color:var(--gov);}
+
+  .cat-label{
+    font-size:12px;font-weight:800;color:var(--gov);
+    letter-spacing:.02em;margin:20px 0 10px;
+    padding-left:10px;border-left:3px solid var(--gov);
+  }
+  .card{
+    border:1px solid var(--line);
+    border-radius:11px;
+    padding:13px 14px 12px;
+    margin-bottom:10px;
+    background:var(--paper);
+    transition:border-color .15s;
+  }
+  .card .ch{
+    display:flex;align-items:center;justify-content:space-between;
+    margin-bottom:7px;gap:10px;
+  }
+  .card .cn{
+    font-size:12px;font-weight:800;color:#fff;background:var(--gov);
+    width:24px;height:24px;border-radius:7px;
+    display:grid;place-items:center;flex:none;
+  }
+  .card .clen{font-size:11px;color:#9aa4b4;margin-left:auto;}
+  .card .ctext{font-size:13.5px;color:var(--ink);line-height:1.62;}
+  .card .copybtn{
+    margin-top:11px;width:100%;
+    font-size:13px;font-weight:700;
+    color:var(--gov);background:var(--gov-soft);
+    border:1px solid #d6e0f2;
+    padding:9px;border-radius:9px;cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .card .copybtn:active{transform:scale(.99);}
+  .card .copybtn.done{color:#fff;background:var(--ok);border-color:var(--ok);}
+
+  /* ── 하단 안내 ── */
+  .foot{
+    margin-top:22px;text-align:center;
+    color:var(--ink-soft);font-size:13px;
+  }
+  .foot .thanks{font-weight:800;color:var(--ink);font-size:15px;margin-bottom:4px;}
+  .disc{
+    margin-top:16px;font-size:11px;color:#9aa4b4;line-height:1.6;
+    border-top:1px solid var(--line);padding-top:14px;
+  }
+
+  /* ── 토스트 ── */
+  #toast{
+    position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);
+    background:var(--ink);color:#fff;font-size:13px;font-weight:600;
+    padding:11px 18px;border-radius:999px;
+    opacity:0;pointer-events:none;transition:.25s;z-index:50;
+    box-shadow:0 8px 24px rgba(0,0,0,.25);
+  }
+  #toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+  @media (max-width:420px){
+    header h1{font-size:22px;}
+    .step-head .who{display:none;}
+    .field .k{width:82px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 헤더 -->
+  <header>
+    <span class="eyebrow">전남광주통합특별시 · 국민추천제</span>
+    <h1>부시장 후보 추천 참여 안내</h1>
+    <p class="sub"><b style="color:#fff">산업 · 일자리 · 경제 · 노동, 첨단주력산업 분야</b> 전문가 추천</p>
+    <p class="sub" style="margin-top:2px">임직원 여러분의 자발적 참여를 부탁드립니다.</p>
+    <div class="period">
+      <span class="tag">참여기간</span>
+      <span><b>2026. 7. 10.(금) ~ 7. 15.(수)</b> · 소요시간 약 2~3분</span>
+    </div>
+  </header>
+
+  <!-- 1단계 -->
+  <section>
+    <div class="step-head">
+      <span class="step-no">1</span>
+      <h2>후보 추천 — 국민추천제</h2>
+      <span class="who">누구나 참여</span>
+    </div>
+    <div class="fieldtag">추천 분야 &nbsp;|&nbsp; 산업 · 일자리 · 경제 · 노동, 첨단주력산업 분야 전문가</div>
+    <p class="lead">아래 링크에 접속해 화면 순서대로 입력하시면 됩니다. <b style="color:var(--accent)">★</b> 표시가 필수 항목입니다.</p>
+
+    <div class="linkbox">
+      <span class="lb-text" id="link1">https://www.hrdb.go.kr/OpenRecommend/recommend/recommend_ch2?menuId=MENU00363</span>
+      <a class="lb-open" href="https://www.hrdb.go.kr/OpenRecommend/recommend/recommend_ch2?menuId=MENU00363" target="_blank" rel="noopener">열기</a>
+    </div>
+
+    <div class="fields">
+      <div class="field"><span class="k">성명 <span class="req">★</span></span><span class="v">백승주 <span class="copychip" data-copy="백승주">복사</span></span></div>
+      <div class="field"><span class="k">성별 <span class="req">★</span></span><span class="v">남</span></div>
+      <div class="field"><span class="k">생년월일</span><span class="v">1964 - 12 - 15</span></div>
+      <div class="field"><span class="k">전화번호</span><span class="v">010-6223-8158 <span class="copychip" data-copy="010-6223-8158">복사</span></span></div>
+      <div class="field"><span class="k">직장명</span><span class="v mut">비워두어도 됩니다</span></div>
+      <div class="field"><span class="k">전자우편</span><span class="v mut">비워두어도 됩니다</span></div>
+    </div>
+
+    <div class="block">
+      <div class="bh">
+        <span class="bt">⑦ 학력·경력 등 (1,000자 이내)</span>
+        <span class="copychip" id="careerCopy" data-copy="career">전체 복사</span>
+      </div>
+      <pre id="careerText">[학력]
+ㅇ 서울대학교 경제학과 졸업
+ㅇ 서울대학교 행정대학원 행정학 석사
+ㅇ 미국 University of Colorado 정책학 석사
+ㅇ 고려대학교 대학원 행정학 박사
+[주요 경력]
+ㅇ (현) 순천대학교 행정학과 석좌교수 / 고려대 생명자원연구소 연구교수
+ㅇ (전) 기획재정부 기획조정실장
+ㅇ (전) 기획재정부 산업경제과장·신성장정책과장·산업예산과장
+ㅇ (전) 아시아개발은행(ADB) 연구원 부원장
+ㅇ (전) 경제협력개발기구(OECD) 선임 정책분석관</pre>
+    </div>
+
+    <div class="note">
+      <b>⑧ 추천사유 <span class="req">★</span></b> 는 아래 <b>[추천사유 예시 30선]</b>에서
+      마음에 드는 문구 <b>하나</b>를 골라 <b>[이 문구 복사]</b> 버튼을 누른 뒤,
+      추천사유 칸에 붙여넣으시면 됩니다. (여러 명이 같은 문구를 쓰지 않도록 서로 다른 번호를 골라 주세요.)
+      <br>⑨ 피추천자 동의여부는 드롭다운에서 선택, ⑩ 참고자료는 선택 사항이며,
+      마지막에 추천인(본인) 정보를 입력하고 제출하시면 됩니다.
+    </div>
+  </section>
+
+  <!-- 2단계 -->
+  <section>
+    <div class="step-head">
+      <span class="step-no">2</span>
+      <h2>시민추천제 투표인단 신청</h2>
+      <span class="who">해당 지역 거주자</span>
+    </div>
+    <p class="lead">아래 링크에 접속해 본인 정보를 입력하면 신청이 완료됩니다.</p>
+    <div class="linkbox">
+      <span class="lb-text" id="link2">https://m.site.naver.com/2c5vk</span>
+      <a class="lb-open" href="https://m.site.naver.com/2c5vk" target="_blank" rel="noopener">열기</a>
+    </div>
+    <div class="fields">
+      <div class="field"><span class="k">대상</span><span class="v">전남광주통합특별시에 주소를 둔 만 18세 이상 시민</span></div>
+    </div>
+    <div class="note">
+      해당 지역에 거주하는 임직원은 <b>1·2단계 모두</b>,
+      그 외 지역은 <b>1단계만</b> 참여 가능합니다.
+    </div>
+  </section>
+
+  <!-- 추천사유 30선 -->
+  <section>
+    <div class="step-head">
+      <span class="step-no" style="background:var(--accent)">✎</span>
+      <h2>추천사유 예시 30선</h2>
+    </div>
+    <p class="ex-intro">아래에서 <b>하나</b>를 골라 <b>[이 문구 복사]</b>를 누른 뒤, 1단계 추천사유 칸에 붙여넣으세요. (모두 300자 이내)</p>
+
+    <div class="filterbar" id="filterbar">
+      <span class="fbtn active" data-cat="all">전체</span>
+      <span class="fbtn" data-cat="c1">첨단산업</span>
+      <span class="fbtn" data-cat="c2">국비·예산</span>
+      <span class="fbtn" data-cat="c3">부처네트워크</span>
+      <span class="fbtn" data-cat="c4">국제·전문성</span>
+      <span class="fbtn" data-cat="c5">지역·애향</span>
+      <span class="fbtn" data-cat="c6">간결형</span>
+    </div>
+
+    <div id="cardHost"></div>
+  </section>
+
+  <div class="foot">
+    <div class="thanks">많은 관심과 참여 부탁드립니다.</div>
+    <div>감사합니다.</div>
+    <p class="disc">
+      ※ 본 안내문의 후보자 경력 정보는 제공된 자료를 바탕으로 정리한 것이며, 사실 여부는 후보자 이력서를 통해 확인하시기 바랍니다.
+      각 문구는 300자 이내로 작성했으나 시스템 글자 수 계산 방식에 따라 차이가 있을 수 있습니다.
+      추천사유 예시는 표현을 다양화한 참고용이며, 필요 시 직접 수정해 사용하셔도 됩니다.
+    </p>
+  </div>
+</div>
+
+<div id="toast">복사되었습니다</div>
+
+<script>
+/* ── 추천사유 30선 데이터 ── */
+var CATS = {
+  c1:"◆ 첨단산업 중심", c2:"◆ 국비 확보·예산 역량 중심", c3:"◆ 중앙부처 네트워크·소통 중심",
+  c4:"◆ 국제 경험·정책 전문성 중심", c5:"◆ 지역 발전·애향심 중심", c6:"◆ 종합·간결형"
+};
+var DATA = [
+  {n:1,c:"c1",t:"반도체·AI·에너지 등 첨단산업 정책 전문가로, 기획재정부 기획조정실장과 산업경제과장·신성장정책과장·산업예산과장 등을 역임하였습니다. OECD·ADB와 국정기획위원회에서 산업·에너지·산업금융 정책을 수행한 경험을 갖추고 있으며, 중앙부처와의 폭넓은 네트워크를 바탕으로 국비 확보, 기업 유치, 첨단산업 육성과 지역경제 활성화를 이끌 적임자입니다."},
+  {n:2,c:"c1",t:"우리 지역 반도체 생산공장 조기 건립에 필요한 인프라 지원계획 수립과 중앙부처 협의를 이끌 최적임자입니다. 기획재정부에서 산업정책·신성장·예산 분야를 담당하며 첨단산업 육성과 기업 유치를 폭넓게 수행하였고, 반도체·AI·에너지 전반에 대한 높은 이해도와 추진력을 갖추어 지역 산업 발전에 크게 기여할 것으로 판단됩니다."},
+  {n:3,c:"c1",t:"반도체·인공지능·에너지 등 첨단주력산업에 대한 이해도가 높은 정책 전문가입니다. 기재부 산업경제과장·신성장정책과장·산업예산과장을 거치며 첨단산업 육성과 기업 유치 실무를 다년간 수행하였고, 국정기획위원회에서 관련 정책 논의에 깊이 관여하였습니다. 지역 첨단산업 기반 조성에 최적의 인물입니다."},
+  {n:4,c:"c1",t:"국가 첨단산업 정책의 중심에서 실무를 담당해 온 전문가입니다. 기획재정부 신성장정책과장으로서 신성장 동력 발굴을, 산업예산과장으로서 산업 예산 편성을 직접 다루었습니다. 반도체 등 지역 전략산업 유치와 국비 확보를 실질적으로 이끌 수 있는 역량을 갖춘 적임자입니다."},
+  {n:5,c:"c1",t:"첨단산업과 산업금융을 아우르는 정책 전문가입니다. OECD 선임 정책분석관과 ADB 부원장을 지내며 국제적 시야를 갖추었고, 기재부에서 산업·예산 실무를 수행하였습니다. 반도체·AI·에너지 산업 유치와 지역경제 도약을 이끌 인물로 추천합니다."},
+
+  {n:6,c:"c2",t:"산업예산과장·산업경제과장을 역임하며 산업 예산 편성 실무를 직접 담당한 예산 전문가입니다. 중앙부처와의 폭넓은 소통 채널을 바탕으로 지역 현안에 필요한 국비를 확보하고, 반도체 등 첨단산업 인프라 구축을 뒷받침할 최적의 인물입니다."},
+  {n:7,c:"c2",t:"기획재정부 기획조정실장을 지낸 예산·재정 전문가로, 산업·에너지·SOC 인프라·지방재정분권 등 다양한 분야의 예산 편성 경험을 보유하고 있습니다. 지역 발전에 필요한 재정 확보와 중앙부처 협의를 효과적으로 이끌 적임자입니다."},
+  {n:8,c:"c2",t:"산업·에너지·중소기업·SOC 인프라·농림수산 등 폭넓은 분야의 정책과 예산을 다루어 온 종합 행정 전문가입니다. 기재부 핵심 보직을 두루 거치며 쌓은 예산 실무 역량으로 지역 국비 확보에 실질적으로 기여할 것으로 기대됩니다."},
+  {n:9,c:"c2",t:"중앙부처 예산 편성의 최전선에서 일해 온 재정 전문가입니다. 기획조정실장과 산업예산과장을 역임하며 산업 예산을 직접 다루었고, 재경부·산업부·국토부 등과 폭넓은 네트워크를 보유하고 있습니다. 지역 현안 예산 확보의 최적임자입니다."},
+  {n:10,c:"c2",t:"지역이 필요로 하는 것은 실질적인 국비 확보 역량입니다. 기재부에서 산업 예산과 신성장 정책을 직접 담당한 백승주 후보는 중앙부처와의 네트워크와 예산 실무 경험을 모두 갖춘, 지역 재정에 실질적 도움을 줄 수 있는 인물입니다."},
+
+  {n:11,c:"c3",t:"재경부·산업부·국토부 등 중앙 부처와 폭넓은 소통 채널과 네트워크를 보유한 행정 전문가입니다. 기획재정부 기획조정실장 등 핵심 보직을 거치며 쌓은 협의 역량으로, 지역 현안 해결을 위한 중앙부처 협의를 효과적으로 이끌 적임자입니다."},
+  {n:12,c:"c3",t:"중앙부처와의 원활한 소통이 지역 발전의 핵심입니다. 기재부 기획조정실장을 지낸 백승주 후보는 여러 부처와의 협의 경험과 네트워크를 두루 갖추고 있어, 반도체 등 첨단산업 인프라 지원을 위한 중앙부처 협의의 적임자입니다."},
+  {n:13,c:"c3",t:"정부 정책 결정 과정에 대한 이해와 폭넓은 부처 네트워크를 갖춘 전문가입니다. 기획재정부 주요 보직과 국정기획위원회 활동을 통해 형성한 협의 채널로, 지역 현안을 중앙 정책에 효과적으로 반영할 수 있는 인물입니다."},
+  {n:14,c:"c3",t:"산업·에너지·인프라 등 다양한 분야에서 중앙부처와 협의해 온 경험이 풍부한 행정가입니다. 지역이 필요로 하는 사업과 예산을 중앙정부와 연결하는 가교 역할을 수행할 최적의 인물로 추천합니다."},
+  {n:15,c:"c3",t:"지방정부가 홀로 해결하기 어려운 현안일수록 중앙부처와의 협의력이 중요합니다. 기재부 핵심 보직과 국정기획위원회를 거친 백승주 후보는 이러한 협의를 실질적으로 이끌 수 있는 네트워크와 경험을 갖추고 있습니다."},
+
+  {n:16,c:"c4",t:"OECD 선임 정책분석관과 아시아개발은행(ADB) 부원장을 지낸 국제 정책 전문가입니다. 산업·재생에너지 정책을 국제 무대에서 다룬 경험과 기재부 실무 역량을 겸비하여, 지역 산업정책에 국제적 시야를 더할 적임자입니다."},
+  {n:17,c:"c4",t:"국내외를 아우르는 정책 전문성을 갖춘 행정가입니다. 기획재정부에서 산업·예산 실무를, OECD·ADB에서 산업·에너지 정책을 다루었습니다. 폭넓은 경험을 바탕으로 지역 첨단산업 발전 전략을 설계할 인물로 추천합니다."},
+  {n:18,c:"c4",t:"국제기구와 중앙부처를 두루 경험한 보기 드문 정책 전문가입니다. OECD와 ADB에서 산업·재생에너지 정책을, 기재부에서 산업 예산을 다루며 쌓은 종합적 식견으로 지역 에너지·산업 정책을 이끌 적임자입니다."},
+  {n:19,c:"c4",t:"재생에너지와 산업정책을 국제 무대에서 다룬 경험을 지역에 접목할 수 있는 전문가입니다. OECD·ADB 근무 경험과 기재부 실무를 겸비하여, 에너지 전환과 첨단산업 육성이라는 시대적 과제에 부응할 인물입니다."},
+  {n:20,c:"c4",t:"학문적 깊이와 실무 경험을 겸비한 정책 전문가입니다. 행정학 박사이자 현직 석좌교수로서의 전문성과, 기재부·OECD·ADB에서 쌓은 실무 경험을 바탕으로 지역 산업·경제 정책을 체계적으로 설계할 적임자입니다."},
+
+  {n:21,c:"c5",t:"애향심이 깊고 지역 발전에 대한 의지가 확고한 전문가입니다. 기재부에서 산업·예산 실무를 담당하며 쌓은 역량을 고향 발전에 쏟을 준비가 된 인물로, 지역 첨단산업 유치와 경제 활성화를 이끌 적임자입니다."},
+  {n:22,c:"c5",t:"뛰어난 추진력과 문제 해결 능력을 갖춘 행정 전문가입니다. 기재부 핵심 보직을 거치며 산업정책과 예산 실무를 두루 경험하였고, 이를 바탕으로 지역 현안을 실질적으로 해결할 수 있는 인물로 추천합니다."},
+  {n:23,c:"c5",t:"우리 지역의 미래 먹거리인 첨단산업 육성을 이끌 전문가입니다. 반도체·AI·에너지 정책에 대한 이해와 중앙부처 네트워크를 갖추어, 지역에 첨단산업 기반을 조성하고 양질의 일자리를 만들 적임자입니다."},
+  {n:24,c:"c5",t:"지역 산업과 일자리, 경제 발전을 실질적으로 이끌 전문가입니다. 산업정책과 예산을 직접 다룬 실무 경험과 중앙부처와의 협의력을 바탕으로, 기업 유치와 지역경제 활성화에 크게 기여할 것으로 기대됩니다."},
+  {n:25,c:"c5",t:"지역 발전을 위해 꼭 필요한 실무형 전문가입니다. 화려한 이력에 그치지 않고 기재부에서 산업·예산 실무를 직접 담당해 온 만큼, 지역 현안 해결과 국비 확보에 실질적인 성과를 낼 수 있는 인물로 추천합니다."},
+
+  {n:26,c:"c6",t:"반도체·AI·에너지 등 첨단산업 정책 전문가입니다. 기재부 기획조정실장과 산업·예산 관련 핵심 보직을 역임하였고, 중앙부처 네트워크를 바탕으로 지역 첨단산업 육성과 국비 확보를 이끌 적임자입니다."},
+  {n:27,c:"c6",t:"산업정책·예산·국제협력을 두루 경험한 종합 행정 전문가입니다. 지역 첨단산업 유치와 경제 활성화에 실질적으로 기여할 인물로 추천합니다."},
+  {n:28,c:"c6",t:"기재부 핵심 보직과 OECD·ADB 경험을 갖춘 정책 전문가입니다. 반도체 등 첨단산업 육성과 중앙부처 협의를 이끌 지역 발전의 적임자입니다."},
+  {n:29,c:"c6",t:"산업·에너지·예산 분야의 풍부한 실무 경험과 중앙부처 네트워크를 갖춘 전문가로, 지역 첨단산업 발전과 국비 확보를 이끌 최적의 인물입니다."},
+  {n:30,c:"c6",t:"첨단산업 정책과 예산 실무를 겸비한 행정 전문가입니다. 지역 산업·경제 발전에 크게 기여할 것으로 판단되어 부시장 후보로 추천합니다."}
+];
+
+var CAREER = document.getElementById('careerText').textContent;
+
+/* ── 렌더 ── */
+var host = document.getElementById('cardHost');
+function render(cat){
+  host.innerHTML = '';
+  var lastCat = null;
+  DATA.forEach(function(d){
+    if(cat!=='all' && d.c!==cat) return;
+    if(d.c!==lastCat){
+      var lab = document.createElement('div');
+      lab.className='cat-label';
+      lab.textContent=CATS[d.c];
+      host.appendChild(lab);
+      lastCat=d.c;
+    }
+    var card = document.createElement('div');
+    card.className='card';
+    card.innerHTML =
+      '<div class="ch"><span class="cn">'+d.n+'</span><span class="clen">'+d.t.length+'자</span></div>'+
+      '<div class="ctext">'+d.t+'</div>'+
+      '<button class="copybtn" data-t="'+encodeURIComponent(d.t)+'">이 문구 복사</button>';
+    host.appendChild(card);
+  });
+}
+render('all');
+
+/* ── 필터 ── */
+document.getElementById('filterbar').addEventListener('click',function(e){
+  var b=e.target.closest('.fbtn'); if(!b) return;
+  this.querySelectorAll('.fbtn').forEach(function(x){x.classList.remove('active');});
+  b.classList.add('active');
+  render(b.dataset.cat);
+});
+
+/* ── 복사 ── */
+var toast=document.getElementById('toast'), tTimer;
+function showToast(msg){
+  toast.textContent=msg||'복사되었습니다';
+  toast.classList.add('show');
+  clearTimeout(tTimer);
+  tTimer=setTimeout(function(){toast.classList.remove('show');},1600);
+}
+function doCopy(text,cb){
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(cb,function(){fallback(text,cb);});
+  } else { fallback(text,cb); }
+}
+function fallback(text,cb){
+  var ta=document.createElement('textarea');
+  ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.focus(); ta.select();
+  try{document.execCommand('copy');}catch(e){}
+  document.body.removeChild(ta); cb&&cb();
+}
+
+document.addEventListener('click',function(e){
+  var btn=e.target.closest('.copybtn');
+  if(btn){
+    var t=decodeURIComponent(btn.dataset.t);
+    doCopy(t,function(){
+      btn.classList.add('done'); btn.textContent='✓ 복사됨';
+      showToast('추천사유가 복사되었습니다');
+      setTimeout(function(){btn.classList.remove('done');btn.textContent='이 문구 복사';},1800);
+    });
+    return;
+  }
+  var chip=e.target.closest('.copychip');
+  if(chip){
+    var val=chip.dataset.copy==='career'?CAREER:chip.dataset.copy;
+    doCopy(val,function(){
+      chip.classList.add('done'); var o=chip.textContent; chip.textContent='✓';
+      showToast('복사되었습니다');
+      setTimeout(function(){chip.classList.remove('done');chip.textContent=o;},1500);
+    });
+  }
+});
+</script>
+</body>
+</html>
